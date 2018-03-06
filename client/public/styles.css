@@ -76,6 +76,7 @@ table {
 -- */
 
 .header {
+  font-family: Arial, Helvetica, sans-serif;
   z-index: 1000;
   grid-area: header;
   position: fixed;
@@ -85,6 +86,8 @@ table {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.168);
   border-bottom: 5px solid green;
   display: flex;
+  justify-content: center;
+  text-align: center;
   
 }
 .companyName {
@@ -102,12 +105,19 @@ table {
   color: green;
   margin: 10px;
   width: 60%;
+  vertical-align: center;
+  
 }
 .spans span {
-  margin: 5px;
+  display: inline-block;
+  padding: 5px;
+  font-size: 3em;
+  height: 100%;
 }
 .spans span:hover {
   cursor: pointer;
+  background-color: green;
+  color: #fff;
 }
 .companyFace {
   height: 100%;
