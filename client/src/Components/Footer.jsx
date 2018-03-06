@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 
 class Footer extends Component {
   instaClick() {
-    window.location.href = 'https://www.instagram.com/kalebhiggins/?hl=en';
+    window.open(
+      'https://www.instagram.com/kalebhiggins/?hl=en',
+      '_blank'
+    );
   }
   render() {
     return (

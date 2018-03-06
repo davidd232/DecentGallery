@@ -23853,7 +23853,7 @@ var Footer = function (_Component) {
   _createClass(Footer, [{
     key: 'instaClick',
     value: function instaClick() {
-      window.location.href = 'https://www.instagram.com/kalebhiggins/?hl=en';
+      window.open('https://www.instagram.com/kalebhiggins/?hl=en', '_blank');
     }
   }, {
     key: 'render',
