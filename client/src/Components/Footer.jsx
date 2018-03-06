@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 class Footer extends Component {
   render() {
     return (
-      <div>
-        <h1>FEETER</h1>
+      <div className='footer'>
+        <h1>FOOTER</h1>
       </div>
     )
   }

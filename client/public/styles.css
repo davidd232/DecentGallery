@@ -1,3 +1,124 @@
-span:hover {
-  color: #0af;
+/* --
+  GENERIC RESET
+-- */
+* {
+  outline: none;
 }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+/*--
+dl, dt, dd, ol, ul, li,
+-- */
+dl, dt, dd, ol,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* --
+  GENERIC RESET
+-- */
+
+/* --
+  GRID
+-- */
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr 60px;
+  grid-template-areas: 
+    "header"
+    "content"
+    "footer"
+}
+/* --
+  GRID
+-- */
+
+/* --
+  HEADER
+-- */
+
+.header {
+  z-index: 1000;
+  grid-area: header;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background-color: #FFF;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.168);
+  border-bottom: 5px solid green;
+}
+.header img {
+  height: 80%;
+}
+/* --
+  HEADER
+-- */
+/* --
+  MAIN
+-- */
+.main {
+  grid-area: content;
+  overflow: hidden;
+}
+/* --
+  MAIN
+-- */
+
+/* --
+  FOOTER
+-- */
+
+.footer {
+  height: 75px;
+  position: static;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 200;
+  background-color: #48822D;
+  border-top: 5px solid green;
+}
+
+/* --
+  FOOTER
+-- */

@@ -10,15 +10,17 @@ import Footer from './Footer';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className='container'>
         <Header />
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route path='/shows' component={Shows}/>
-          <Route path='/media' component={Media}/>
-          <Route path='/shop' component={Shop}/>
-          <Route path='/about' component={About}/>
-        </Switch>
+        <div className='main'>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/shows' component={Shows} />
+            <Route path='/media' component={Media} />
+            <Route path='/shop' component={Shop} />
+            <Route path='/about' component={About} />
+          </Switch>
+        </div>
         <Footer />
       </div>
     )

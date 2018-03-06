@@ -18337,16 +18337,20 @@ var App = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'container' },
         _react2.default.createElement(_Header2.default, null),
         _react2.default.createElement(
-          _reactRouterDom.Switch,
-          null,
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/shows', component: _Shows2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/media', component: _Media2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/shop', component: _Shop2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
+          'div',
+          { className: 'main' },
+          _react2.default.createElement(
+            _reactRouterDom.Switch,
+            null,
+            _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/shows', component: _Shows2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/media', component: _Media2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/shop', component: _Shop2.default }),
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })
+          )
         ),
         _react2.default.createElement(_Footer2.default, null)
       );
@@ -23634,7 +23638,7 @@ var About = function (_Component) {
         _react2.default.createElement(
           'h1',
           null,
-          'ABOUT'
+          'Decent Gallery is Decent.'
         )
       );
     }
@@ -23746,12 +23750,9 @@ var Header = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
-        _react2.default.createElement(
-          'h1',
-          null,
-          'HEADER'
-        ),
+        { className: 'header' },
+        _react2.default.createElement('img', { src: './images/DecentLetters.png', alt: 'name' }),
+        _react2.default.createElement('img', { src: './images/DecentHead.png', alt: 'logo' }),
         _react2.default.createElement(
           'span',
           { onClick: function onClick() {
@@ -23841,11 +23842,11 @@ var Footer = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'footer' },
         _react2.default.createElement(
           'h1',
           null,
-          'FEETER'
+          'FOOTER'
         )
       );
     }

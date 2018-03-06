@@ -5,8 +5,9 @@ import { withRouter } from 'react-router-dom';
 class Header extends Component {
   render() {
     return (
-      <div>
-        <h1>HEADER</h1>
+      <div className='header'>
+        <img src='./images/DecentLetters.png' alt='name' />
+        <img src='./images/DecentHead.png' alt='logo' />
         <span onClick={() => { this.props.history.push('/') }}>Home</span> /
         <span onClick={() => { this.props.history.push('/shows') }}>Shows</span> /
         <span onClick={() => { this.props.history.push('/media') }}>Media</span> /
