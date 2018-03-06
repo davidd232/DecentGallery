@@ -23681,27 +23681,31 @@ var Home = function (_Component) {
           'HOME'
         ),
         _react2.default.createElement(
-          'button',
+          'span',
           null,
           'Home'
         ),
+        ' /',
         _react2.default.createElement(
-          'button',
+          'span',
           null,
           'Shows'
         ),
+        ' /',
         _react2.default.createElement(
-          'button',
+          'span',
           null,
           'Media'
         ),
+        ' /',
         _react2.default.createElement(
-          'button',
+          'span',
           null,
           'Shop'
         ),
+        ' /',
         _react2.default.createElement(
-          'button',
+          'span',
           null,
           'About'
         )
