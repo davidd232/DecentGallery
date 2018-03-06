@@ -92,7 +92,7 @@ table {
 }
 .companyName {
   flex: initial;
-  width: 30%;
+  width: 20%;
 }
 .companyName img {
   height: 100%;
@@ -104,7 +104,7 @@ table {
   flex: none;
   color: green;
   margin: 10px;
-  width: 60%;
+  width: 70%;
   vertical-align: center;
   
 }

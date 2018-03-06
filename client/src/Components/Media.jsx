@@ -4,7 +4,7 @@ class Media extends Component {
   render() {
     return (
       <div>
-        <h1>MEDIA</h1>
+        <h1>Media Coming Soon</h1>
       </div>
     )
   }

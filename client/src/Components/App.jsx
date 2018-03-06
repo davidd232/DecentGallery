@@ -7,6 +7,7 @@ import Media from './Media';
 import About from './About';
 import Header from './Header';
 import Footer from './Footer';
+import Login from './OwnerComps/Login';
 class App extends Component {
   render() {
     return (
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path='/media' component={Media} />
             <Route path='/shop' component={Shop} />
             <Route path='/about' component={About} />
+            <Route path='/owner' component={Login} />
           </Switch>
         </div>
         <Footer />
