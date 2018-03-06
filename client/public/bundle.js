@@ -23851,6 +23851,11 @@ var Footer = function (_Component) {
   }
 
   _createClass(Footer, [{
+    key: 'instaClick',
+    value: function instaClick() {
+      window.location.href = 'https://www.instagram.com/kalebhiggins/?hl=en';
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -23858,7 +23863,7 @@ var Footer = function (_Component) {
         { className: 'footer' },
         _react2.default.createElement('img', { src: './images/facebookIcon.svg', alt: 'facebookIcon' }),
         _react2.default.createElement('img', { src: './images/DecentLOGO.png', alt: 'logo' }),
-        _react2.default.createElement('img', { src: './images/instagramLogo.svg', alt: 'instagramIcon' })
+        _react2.default.createElement('img', { onClick: this.instaClick.bind(this), src: './images/instagramLogo.svg', alt: 'instagramIcon' })
       );
     }
   }]);
