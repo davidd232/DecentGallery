@@ -6,13 +6,17 @@ class Header extends Component {
   render() {
     return (
       <div className='header'>
-        <img src='./images/DecentLetters.png' alt='name' />
-        <img src='./images/DecentHead.png' alt='logo' />
-        <span onClick={() => { this.props.history.push('/') }}>Home</span> /
-        <span onClick={() => { this.props.history.push('/shows') }}>Shows</span> /
-        <span onClick={() => { this.props.history.push('/media') }}>Media</span> /
-        <span onClick={() => { this.props.history.push('/shop') }}>Shop</span> /
-        <span onClick={() => { this.props.history.push('/about') }}>About</span>
+        <div className='companyName'>
+          <img onClick={() => { this.props.history.push('/') }} src='./images/DecentLetters.png' alt='name' />
+        </div>
+        <div className='spans'>
+          <span onClick={() => { this.props.history.push('/') }}>Home</span>
+          <span onClick={() => { this.props.history.push('/shows') }}>Shows</span>
+          <span onClick={() => { this.props.history.push('/media') }}>Media</span>
+          <span onClick={() => { this.props.history.push('/shop') }}>Shop</span>
+          <span onClick={() => { this.props.history.push('/about') }}>About</span>
+        </div>
+        <img className='companyFace' src='./images/DecentHead.png' alt='logoHead' />
       </div>
     )
   }

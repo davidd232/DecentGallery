@@ -23751,47 +23751,53 @@ var Header = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'header' },
-        _react2.default.createElement('img', { src: './images/DecentLetters.png', alt: 'name' }),
-        _react2.default.createElement('img', { src: './images/DecentHead.png', alt: 'logo' }),
         _react2.default.createElement(
-          'span',
-          { onClick: function onClick() {
+          'div',
+          { className: 'companyName' },
+          _react2.default.createElement('img', { onClick: function onClick() {
               _this2.props.history.push('/');
-            } },
-          'Home'
+            }, src: './images/DecentLetters.png', alt: 'name' })
         ),
-        ' /',
         _react2.default.createElement(
-          'span',
-          { onClick: function onClick() {
-              _this2.props.history.push('/shows');
-            } },
-          'Shows'
+          'div',
+          { className: 'spans' },
+          _react2.default.createElement(
+            'span',
+            { onClick: function onClick() {
+                _this2.props.history.push('/');
+              } },
+            'Home'
+          ),
+          _react2.default.createElement(
+            'span',
+            { onClick: function onClick() {
+                _this2.props.history.push('/shows');
+              } },
+            'Shows'
+          ),
+          _react2.default.createElement(
+            'span',
+            { onClick: function onClick() {
+                _this2.props.history.push('/media');
+              } },
+            'Media'
+          ),
+          _react2.default.createElement(
+            'span',
+            { onClick: function onClick() {
+                _this2.props.history.push('/shop');
+              } },
+            'Shop'
+          ),
+          _react2.default.createElement(
+            'span',
+            { onClick: function onClick() {
+                _this2.props.history.push('/about');
+              } },
+            'About'
+          )
         ),
-        ' /',
-        _react2.default.createElement(
-          'span',
-          { onClick: function onClick() {
-              _this2.props.history.push('/media');
-            } },
-          'Media'
-        ),
-        ' /',
-        _react2.default.createElement(
-          'span',
-          { onClick: function onClick() {
-              _this2.props.history.push('/shop');
-            } },
-          'Shop'
-        ),
-        ' /',
-        _react2.default.createElement(
-          'span',
-          { onClick: function onClick() {
-              _this2.props.history.push('/about');
-            } },
-          'About'
-        )
+        _react2.default.createElement('img', { className: 'companyFace', src: './images/DecentHead.png', alt: 'logoHead' })
       );
     }
   }]);
@@ -23843,11 +23849,9 @@ var Footer = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'footer' },
-        _react2.default.createElement(
-          'h1',
-          null,
-          'FOOTER'
-        )
+        _react2.default.createElement('img', { src: './images/facebookIcon.svg', alt: 'facebookIcon' }),
+        _react2.default.createElement('img', { src: './images/DecentLOGO.png', alt: 'logo' }),
+        _react2.default.createElement('img', { src: './images/instagramLogo.svg', alt: 'instagramIcon' })
       );
     }
   }]);

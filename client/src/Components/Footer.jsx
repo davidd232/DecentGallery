@@ -5,7 +5,9 @@ class Footer extends Component {
   render() {
     return (
       <div className='footer'>
-        <h1>FOOTER</h1>
+        <img src="./images/facebookIcon.svg" alt="facebookIcon"/>
+        <img src='./images/DecentLOGO.png' alt='logo'/>
+        <img src="./images/instagramLogo.svg" alt="instagramIcon"/>
       </div>
     )
   }
