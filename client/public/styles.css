@@ -111,7 +111,7 @@ table {
 .spans span {
   display: inline-block;
   padding: 5px;
-  font-size: 3em;
+  font-size: xx-large;
   height: 100%;
 }
 .spans span:hover {
