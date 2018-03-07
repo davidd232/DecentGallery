@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from './Home';
-import Shows from './Shows';
-import Shop from './Shop';
-import Media from './Media';
+import Shows from './Shows/Shows';
+import Shop from './Shop/Shop';
+import Media from './Media/Media';
 import About from './About';
-import Header from './Header';
+import Header from './Nav/Header';
 import Footer from './Footer';
 import Login from './OwnerComps/Login';
 class App extends Component {
