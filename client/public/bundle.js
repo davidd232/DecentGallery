@@ -23914,7 +23914,8 @@ var Login = function (_Component) {
 
     _this.state = {
       username: '',
-      password: ''
+      password: '',
+      err: ''
     };
     _this.handleChange = _this.handleChange.bind(_this);
     _this.handleSubmit = _this.handleSubmit.bind(_this);
@@ -23925,19 +23926,26 @@ var Login = function (_Component) {
     key: 'handleChange',
     value: function handleChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
-      console.log(this.state);
     }
   }, {
     key: 'handleSubmit',
     value: function handleSubmit() {
+      var _this2 = this;
+
       var payload = {
         username: this.state.username,
         password: this.state.password
       };
       _axios2.default.post('/api/login', payload).then(function (data) {
         console.log(data);
+        _this2.setState({
+          err: 'Logged In. Kinda'
+        });
       }).catch(function (err) {
         console.log(err);
+        _this2.setState({
+          err: 'FUCK YOU. You\'re not the owner'
+        });
       });
     }
   }, {
@@ -23960,7 +23968,8 @@ var Login = function (_Component) {
             'button',
             { onClick: this.handleSubmit, type: 'submit' },
             'Login'
-          )
+          ),
+          this.state.err
         )
       );
     }

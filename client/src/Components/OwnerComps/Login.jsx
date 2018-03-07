@@ -6,7 +6,8 @@ class Login extends Component {
     super()
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      err: ''
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,7 +16,6 @@ class Login extends Component {
     this.setState({
       [e.target.name]: e.target.value
     })
-    console.log(this.state);
   }
   handleSubmit() {
     const payload = {
@@ -25,9 +25,15 @@ class Login extends Component {
     axios.post('/api/login', payload)
       .then((data) => {
         console.log(data);
+        this.setState({
+          err: 'Logged In. Kinda'
+        })
       })
       .catch((err) => {
         console.log(err);
+        this.setState({
+          err: 'FUCK YOU. You\'re not the owner'
+        })
       })
   }
   render() {
@@ -38,6 +44,7 @@ class Login extends Component {
           <input onChange={this.handleChange} type="text" name="username" id="username"/>
           <input onChange={this.handleChange} type="password" name="password"/>
           <button onClick={this.handleSubmit} type='submit'>Login</button>
+          {this.state.err}
         </div>
       </div>
     )
