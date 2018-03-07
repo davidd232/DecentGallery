@@ -23955,7 +23955,7 @@ var Login = function (_Component) {
           'div',
           null,
           _react2.default.createElement('input', { onChange: this.handleChange, type: 'text', name: 'username', id: 'username' }),
-          _react2.default.createElement('input', { onChange: this.handleChange, type: 'password' }),
+          _react2.default.createElement('input', { onChange: this.handleChange, type: 'password', name: 'password' }),
           _react2.default.createElement(
             'button',
             { onClick: this.handleSubmit, type: 'submit' },
