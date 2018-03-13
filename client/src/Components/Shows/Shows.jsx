@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import CardHolder from './CardHolder';
 
 class Shows extends Component {
   render() {
     return (
       <div>
-        <h1>Shows Coming Soon</h1>
+        <CardHolder />
       </div>
     )
   }
