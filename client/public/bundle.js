@@ -24621,9 +24621,7 @@ var Login = function (_Component) {
       };
       _axios2.default.post('/api/login', payload).then(function (data) {
         console.log(data);
-        _this2.setState({
-          err: 'Logged In. Kinda'
-        });
+        _this2.props.history.push('/');
       }).catch(function (err) {
         console.log(err);
         _this2.setState({

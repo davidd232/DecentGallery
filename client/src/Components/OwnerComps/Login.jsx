@@ -25,9 +25,7 @@ class Login extends Component {
     axios.post('/api/login', payload)
       .then((data) => {
         console.log(data);
-        this.setState({
-          err: 'Logged In. Kinda'
-        })
+        this.props.history.push('/');
       })
       .catch((err) => {
         console.log(err);
