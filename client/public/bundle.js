@@ -24100,7 +24100,11 @@ var App = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'main' },
-          _react2.default.createElement(
+          localStorage.getItem('token') ? _react2.default.createElement(
+            'h1',
+            null,
+            'You got that token, boooiiiiiiiii!'
+          ) : _react2.default.createElement(
             _reactRouterDom.Switch,
             null,
             _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
@@ -24432,6 +24436,12 @@ var Header = function (_Component) {
   }
 
   _createClass(Header, [{
+    key: 'handleClick',
+    value: function handleClick() {
+      localStorage.removeItem('token');
+      location.reload();
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -24485,7 +24495,11 @@ var Header = function (_Component) {
             'About'
           )
         ),
-        _react2.default.createElement('img', { onClick: function onClick() {
+        localStorage.getItem('token') ? _react2.default.createElement(
+          'button',
+          { onClick: this.handleClick.bind(this) },
+          'Logout'
+        ) : _react2.default.createElement('img', { onClick: function onClick() {
             _this2.props.history.push('/owner');
           }, className: 'companyFace', src: './images/DecentHead.png', alt: 'logoHead' })
       );
@@ -24621,6 +24635,7 @@ var Login = function (_Component) {
       };
       _axios2.default.post('/api/login', payload).then(function (data) {
         console.log(data);
+        localStorage.setItem('token', true);
         _this2.props.history.push('/');
       }).catch(function (err) {
         console.log(err);

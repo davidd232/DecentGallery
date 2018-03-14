@@ -14,6 +14,9 @@ class App extends Component {
       <div className='container'>
         <Header />
         <div className='main'>
+        { localStorage.getItem('token') ?
+          <h1>You got that token, boooiiiiiiiii!</h1>
+          :
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/shows' component={Shows} />
@@ -22,6 +25,7 @@ class App extends Component {
             <Route path='/about' component={About} />
             <Route path='/owner' component={Login} />
           </Switch>
+        }
         </div>
         <Footer />
       </div>

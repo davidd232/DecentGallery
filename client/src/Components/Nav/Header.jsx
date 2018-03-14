@@ -3,6 +3,10 @@ import { withRouter } from 'react-router-dom';
 // import 
 
 class Header extends Component {
+  handleClick() {
+    localStorage.removeItem('token');
+    location.reload();
+  }
   render() {
     return (
       <div className='header'>
@@ -16,7 +20,11 @@ class Header extends Component {
           <span onClick={() => { this.props.history.push('/shop') }}>Shop</span>
           <span onClick={() => { this.props.history.push('/about') }}>About</span>
         </div>
-        <img onClick={() => { this.props.history.push('/owner') }} className='companyFace' src='./images/DecentHead.png' alt='logoHead' />
+        {localStorage.getItem('token') ?
+          <button onClick={this.handleClick.bind(this)}>Logout</button>
+          :
+          <img onClick={() => { this.props.history.push('/owner') }} className='companyFace' src='./images/DecentHead.png' alt='logoHead' />
+        }
       </div>
     )
   }

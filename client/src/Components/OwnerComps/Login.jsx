@@ -25,6 +25,7 @@ class Login extends Component {
     axios.post('/api/login', payload)
       .then((data) => {
         console.log(data);
+        localStorage.setItem('token', true);
         this.props.history.push('/');
       })
       .catch((err) => {
