@@ -17,10 +17,10 @@ class Header extends Component {
         {localStorage.getItem('token') ?
           <div className='spans'>
             <span onClick={() => { this.props.history.push('/') }}>Home</span>
-            <span onClick={() => { this.props.history.push('/shows') }}>Shows</span>
-            <span onClick={() => { this.props.history.push('/media') }}>Media</span>
-            <span onClick={() => { this.props.history.push('/shop') }}>Shop</span>
-            <span onClick={() => { this.props.history.push('/about') }}>About</span>
+            <span onClick={() => { this.props.history.push('/showsOwner') }}>Shows</span>
+            <span onClick={() => { this.props.history.push('/mediaOwner') }}>Media</span>
+            <span onClick={() => { this.props.history.push('/shopOwner') }}>Shop</span>
+            <span onClick={() => { this.props.history.push('/aboutOwner') }}>About</span>
           </div>
           <button onClick={this.handleClick.bind(this)}>Logout</button>
           :
