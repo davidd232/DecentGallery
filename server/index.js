@@ -3,6 +3,7 @@ const path = require('path');
 const parser = require('body-parser');
 const app = express();
 const router = require('./routes');
+const mongoDB = require('./DB/mongo');
 
 app.use(express.static(path.resolve(__dirname, '../client/public')));
 app.use(parser.json());

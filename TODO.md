@@ -3,6 +3,7 @@
     delete them to update on the non-admin components.
 [] - Add backend routes for owner.
 [] - Add bootstrap to get styling even through whole site because of laziness and lack of time.
+[] - Setup DB w/tables for shows/media
 
 
 
